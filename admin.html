@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PitLane Admin</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="wordmark"><span>PIT</span><span>LANE</span></div>
+    <div class="header-contact"><a href="index.html">← Back to shop</a></div>
+  </div>
+</header>
+<div class="grid-line"></div>
+
+<!-- LOGIN -->
+<main class="admin-wrap" id="login-view">
+  <div class="login-card">
+    <h2>Admin login</h2>
+    <p class="modal-sub">Enter the shop password to view orders and manage stock.</p>
+    <div class="field">
+      <label for="login-password">Password</label>
+      <input type="password" id="login-password" placeholder="••••••••" />
+    </div>
+    <button type="button" class="btn btn-gold" id="login-btn">Log in</button>
+    <div class="form-msg" id="login-msg"></div>
+  </div>
+</main>
+
+<!-- DASHBOARD -->
+<main class="admin-wrap" id="dashboard-view" style="display:none;">
+
+  <section class="admin-section">
+    <div class="section-heading">
+      <h2>STOCK</h2>
+      <span>Update this any time you sell or restock</span>
+    </div>
+    <div class="stock-grid" id="stock-grid"></div>
+  </section>
+
+  <section class="admin-section">
+    <div class="section-heading">
+      <h2>ORDERS</h2>
+      <span id="orders-updated">—</span>
+    </div>
+    <div id="orders-list" class="orders-list"></div>
+  </section>
+
+</main>
+
+<div class="toast" id="new-order-toast"></div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
