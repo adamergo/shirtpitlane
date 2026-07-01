@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PitLane Shop — Official Team Kit</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="wordmark"><span>PIT</span><span>LANE</span></div>
+    <div class="header-contact">
+      Order by WhatsApp too:
+      <a href="https://wa.me/212600000000" target="_blank" rel="noopener">+212 6 00 00 00 00</a>
+    </div>
+  </div>
+</header>
+<div class="grid-line"></div>
+
+<main>
+  <section class="hero">
+    <div>
+      <h1>OFFICIAL TEAM KIT.<br><span class="accent">DELIVERED TO YOUR DOOR.</span></h1>
+      <p>Genuine 2026 season team-issue T-shirts from the grid's biggest names. Prices in Moroccan Dirham, cash on delivery, nationwide shipping.</p>
+      <div class="hero-badges">
+        <span class="hero-badge">🚚 Cash on delivery</span>
+        <span class="hero-badge">🇲🇦 Ships across Morocco</span>
+        <span class="hero-badge">✅ Limited stock, updated live</span>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="lap">SEASON — 2026</div>
+      <div class="big">2 TEAMS<br>ON THE GRID</div>
+      <div class="small">Stock updates in real time — once it's gone, it's gone until restock.</div>
+    </div>
+  </section>
+
+  <section class="shop" id="shop">
+    <div class="section-heading">
+      <h2>THE LINE-UP</h2>
+      <span id="stock-updated">loading stock…</span>
+    </div>
+    <div class="product-grid" id="product-grid">
+      <!-- product cards injected by store.js -->
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>© 2026 PitLane Shop. All team logos belong to their respective owners.</div>
+    <div><a href="admin.html">Shop admin</a></div>
+  </div>
+</footer>
+
+<!-- Order modal -->
+<div class="modal-overlay" id="order-overlay">
+  <div class="modal">
+    <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+
+    <div id="order-form-view">
+      <h3 id="modal-product-name">Order item</h3>
+      <p class="modal-sub" id="modal-product-team">Team</p>
+
+      <form id="order-form">
+        <input type="hidden" id="order-product-id" />
+
+        <div class="field-row">
+          <div class="field">
+            <label for="order-size">Size</label>
+            <select id="order-size" required>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L" selected>L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="order-qty">Quantity</label>
+            <input type="number" id="order-qty" min="1" value="1" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="order-name">Full name</label>
+          <input type="text" id="order-name" required placeholder="e.g. Yassine El Amrani" />
+        </div>
+
+        <div class="field">
+          <label for="order-phone">Phone number</label>
+          <input type="tel" id="order-phone" required placeholder="e.g. 06 00 00 00 00" />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="order-city">City</label>
+            <input type="text" id="order-city" required placeholder="e.g. Rabat" />
+          </div>
+          <div class="field">
+            <label for="order-address">Address</label>
+            <input type="text" id="order-address" required placeholder="Street, neighborhood…" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="order-notes">Notes (optional)</label>
+          <textarea id="order-notes" placeholder="Anything we should know?"></textarea>
+        </div>
+
+        <div class="order-total">
+          <span>Total</span>
+          <span id="order-total-amount">0 DHS</span>
+        </div>
+
+        <button type="submit" class="btn btn-gold" id="order-submit-btn">Place order — cash on delivery</button>
+        <div class="form-msg" id="order-msg"></div>
+      </form>
+    </div>
+
+    <div id="order-confirm-view" style="display:none;">
+      <div class="confirmation">
+        <div class="flag-swatch"></div>
+        <h3>Order received!</h3>
+        <div class="order-num" id="confirm-order-number">#1001</div>
+        <p>We'll call or WhatsApp you shortly to confirm delivery. Thanks for the order!</p>
+        <button type="button" class="btn btn-dark confirm-done-btn" id="confirm-close-btn">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/store.js"></script>
+</body>
+</html>
